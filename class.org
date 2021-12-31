@@ -1,0 +1,49 @@
+#+TITLE: Objekorientierte Programmierung
+
+feu.informatik.kurs1618{betreuung,diskussion}
+
+* Einstieg
+Objekte, die jeweils eine Identitaet haben, die einander Nachrichten schicken
+und die als Reaktion auf Nachrichten ihren eigenen Zustand veraendern koennen.
+
+Ein objekt kennt ein anderes, indem es als Teil seines eigenen Zustands eine
+/Referenz/ auf das andere Objekt besitzt. Die Referenz(en) koennen dem Objekt
+als Parameter einer Nachricht geschickt werden.
+
+Teilung der Auftragserteilung und Augtragsdurchfuerung: eine Nachricht wird
+durch eine /Methode/ bearbeitet, deren Realisierung von dem Ausloeser der
+Nachricht veborgen ist.
+
+Klassifikation: wir gruppieren Objekte unter dem Aspekt, welche Nachrichten sie
+verstehen. Eine /Klasse/ legt fest die Faehigkeiten und Eigenschaften, die allen
+Objekten der Klasse gemeinsam ist. Eine /Superklasse/ besitzt nur diejenigen
+Eigenschaften, die allen ihrer /Subclassen/ gemeinsam sind.
+
+Eine /abstrakte Klasse/ hat keine direkte Objekte, sie fasst nur zusammen
+Gemeinsamkeiten ihrer Subklassen. Die Entscheidung, eine Klasse als abstrakt
+auszulegen, ist vom Kontext abhaengig. Z.B. Klasse Hund kann konkret sein im
+Kontext der Registrietung der Haustiere, und abstrakt zu den Zwecken eines
+Hundesalons, in dem spezifische eingenschaften der verschiedenen Hunderassen von
+Bedeuting sind.
+
+Durch /Vererbung/ brauchen die gemeinsamen Eigenschaften nur einmal in der
+Superklasse beschrieben zu weden. Durch /Spezialisierung/ koennen die SUbklassen
+die Eingenschaften modifizieren.
+
+Alle Objekten einer Klasse sind auch Objekten aller ihrer Superklassen.
+** Java
+*** Arrays
+Jagged Arrays: die referenzierte Arrays in einen Java-array koennen
+unterschiedliche Laengen haben.
+#+begin_src java
+char[][] satz;
+#+end_src
+
+E.g. erzeugt die Anweisung
+#+begin_src java
+boolean[][] b = new boolean[2][];
+#+end_src
+das Objektgeflecht
+#+begin_example
+
+#+end_example
